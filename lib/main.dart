@@ -18,9 +18,9 @@ double _prog(int p) {
 // Global theme switch (light / dark)
 final ValueNotifier<ThemeMode> themeMode = ValueNotifier(ThemeMode.light);
 
-// ---------------------------------------------------------------------------
+
 // Colors that change with the theme
-// ---------------------------------------------------------------------------
+
 class Pal {
   final bool dark;
   Pal(this.dark);
@@ -35,9 +35,9 @@ class Pal {
   Color get accent => dark ? const Color(0xFF3B82F6) : kNavy;
 }
 
-// ---------------------------------------------------------------------------
+
 // Glass panel (blur + translucent fill + light border)
-// ---------------------------------------------------------------------------
+
 class Glass extends StatelessWidget {
   final Widget child;
   final EdgeInsets padding, margin;
@@ -77,9 +77,9 @@ class Glass extends StatelessWidget {
   }
 }
 
-// ---------------------------------------------------------------------------
+
 // Gradient background with soft glowing blobs
-// ---------------------------------------------------------------------------
+
 class AppBg extends StatelessWidget {
   final Widget child;
   const AppBg({super.key, required this.child});
@@ -371,7 +371,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         body: SingleChildScrollView(
           padding: const EdgeInsets.fromLTRB(20, 8, 20, 90),
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            // ---------------- Header (glass) ----------------
+            //Header (glass)
             Glass(
               radius: 32,
               padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
